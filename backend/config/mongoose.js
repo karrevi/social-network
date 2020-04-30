@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-
-
+const mongo_URI = process.env.mongo_URI || 'mongodb://localhost:27017/social_network'
 mongoose.connect(mongo_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -10,3 +9,5 @@ mongoose.connect(mongo_URI, {
 
     .then(() => console.log('Successfully conected to MongoDB'))
     .catch(console.error)
+
+mongoose.exports = mongoose;
