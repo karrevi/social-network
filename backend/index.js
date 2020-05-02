@@ -2,7 +2,7 @@ require('./config/mongoose.js');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const usersRouter = require('./routes/users');
 
 app.use(function (req, res, next) {

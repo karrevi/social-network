@@ -9,5 +9,3 @@ mongoose.connect(mongo_URI, {
 
     .then(() => console.log('Successfully conected to MongoDB'))
     .catch(console.error)
-
-mongoose.exports = mongoose;
