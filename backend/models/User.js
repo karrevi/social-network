@@ -13,9 +13,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    tokens:[String],
 });
 UserSchema.method.toJSON = function(params){
     const user = this._doc;
+    delete user.tokens;
     delete user.password;
     delete user._v;
     return user;
