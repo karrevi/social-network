@@ -62,7 +62,25 @@ const UserController = {
                 message: 'Hubo un problema al conectarte'
             })
         }
+    },
+    logout(req, res) {
+        User.findByIdAndUpdate(req.user._id, {
+                $pull: {
+                    tokens: req.headers.authorization
+                }
+            })
+            .then(() => res.send({
+                message: 'Te has desconectado'
+            }))
+            .catch(error => {
+                console.error(error)
+                res.status(500).send({
+                    message: 'Hay un problema al intentar desconectarte'
+                })
+
+            })
     }
+
 }
 
 module.exports = UserController;
