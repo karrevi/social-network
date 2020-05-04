@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.scss';
 import { notification } from 'antd';
 import { register } from '../../../redux/actions/users';
 
