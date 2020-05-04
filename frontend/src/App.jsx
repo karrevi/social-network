@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.scss';
+import 'antd/dist/antd.css';
 
 import Header from './components/header/header';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './containers/user/Login/Login';
-import Register from './containers/user/Register/Register'
+import Register from './containers/user/Register/Register';
+import Profile from './containers/user/Profile/Profile';
 
 function App() {
     return (
@@ -14,6 +16,7 @@ function App() {
             <Switch>
                 <Route path='/login' component={Login} exact />
                 <Route path='/register' component={Register} exact />
+                <Route path='/profile' component={Profile} exact />
             </Switch>
             </BrowserRouter>
         </div>

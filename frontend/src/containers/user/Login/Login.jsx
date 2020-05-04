@@ -14,7 +14,7 @@ const Login = props => {
             .then(res => {
                 notification.success({ message: 'Login', description: res.data.message, duration: 2000 })
                 setTimeout(() => {
-                    props.history.push('');
+                    props.history.push('/profile');
                 }, 2000);
             })
             .catch(() => {
