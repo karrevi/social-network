@@ -1,14 +1,13 @@
 import React from 'react';
 import './header.scss';
+import { NavLink } from 'react-router-dom'
 
 
 const Header = () => {
     return (
         <header className="headerStation">
-            <div className="headerUser">
-                <navLink to = "/login" exact>Login</navLink>
-                <navLink to = "/register" exact>Register</navLink>
-            </div>
+            <NavLink to="/register" exact>Register</NavLink>
+            <NavLink to="/login" exact>Login</NavLink>
         </header>
     )
 }

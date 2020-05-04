@@ -1,5 +1,27 @@
 @import '../../color.scss';
 
 .headerStation {
-    background-color: $SolidDark;
+    background-color: $Solid;
+    padding: 0 0.8em;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        all: unset;
+        cursor: pointer;
+        padding: 0.5em;
+        color: $LigthLigth;
+
+        &:hover {
+            background-color: $Dark;
+            color: $Ligth;
+        }
+    }
+
+
+    .active {
+        background-color: $Dark;
+        color: $Ligth;
+    }
+
 }
