@@ -1,7 +1,8 @@
 import React from 'react';
-import './Login.scss';
 import { login } from '../../../redux/actions/users';
+import './Login.scss';
 import { notification } from 'antd';
+import { UnlockOutlined } from '@ant-design/icons'
 
 const Login = props => {
     const handleSubmit = event => {
@@ -24,12 +25,17 @@ const Login = props => {
     return (
         <div className="loginContainer">
             <form onSubmit={handleSubmit}>
-                <h2>Login</h2>
-                <input type="email" label="email" name="email" placeholder="Introduzca su correo electrónico" />
-                <input type="password" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
-                <button type="submit" variant="contained" color="primary">
-                    Login
-                </button>
+                <div className="illustration"><UnlockOutlined />
+                </div>
+                <div className="form-group">
+                    <input type="email" className="form-control" label="email" name="email" placeholder="Introduzca su correo electrónico" />
+                </div>
+                <div className="form-group">
+                    <input type="password" className="form-control" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
+                </div>
+                <div className="form-group">
+                    <button type="submit" className="btn btn-block login-up" variant="contained" color="primary"> Entrar </button>
+                </div>
             </form>
         </div>
     )

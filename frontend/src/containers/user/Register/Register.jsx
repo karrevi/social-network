@@ -1,7 +1,9 @@
 import React from 'react';
+import { register } from '../../../redux/actions/users';
 import './Register.scss';
 import { notification } from 'antd';
-import { register } from '../../../redux/actions/users';
+import { UserOutlined } from '@ant-design/icons'
+
 
 
 const Register = props => {
@@ -27,13 +29,26 @@ const Register = props => {
     return (
         <div className="registerContainer">
             <form onSubmit={handleSubmit}>
-                <h2>Register</h2>
-                <input type="text" label="Nombre" name="name" placeholder="Introduzca su nombre" />
-                <input type="text" label="Nombre" name="surname" placeholder="Introduzca su apellido" />
-                <input type="text" label="Nombre" name="age" placeholder="Introduce tu edad" />
-                <input type="email" label="email" name="email" placeholder="Introduzca su correo electrónico" />
-                <input type="password" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
-                <button type="submit" variant="contained" color="primary">Register</button>
+                <div className="form-icon"> <UserOutlined />
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control item" label="Nombre" name="name" placeholder="Introduzca su nombre" />
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control item" label="Nombre" name="surname" placeholder="Introduzca su apellido" />
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control item" label="Nombre" name="age" placeholder="Introduce tu edad" />
+                </div>
+                <div className="form-group">
+                    <input type="email" className="form-control item" label="email" name="email" placeholder="Introduzca su correo electrónico" />
+                </div>
+                <div className="form-group">
+                    <input type="password" className="form-control item" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
+                </div>
+                <div className="form-group">
+                    <button type="submit" className="btn btn-block create-account" variant="contained" color="primary">Crear cuenta</button>
+                </div>
             </form>
         </div>
     )

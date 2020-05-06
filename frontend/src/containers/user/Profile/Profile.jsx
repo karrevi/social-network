@@ -7,7 +7,7 @@ const Profile = ({ user }) => {
         <div className="profileContainer">
             {user && <React.Fragment>
                 <div className="userHeader">
-                    <img src="" alt="" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/WLM_logo.svg" alt="" />
                     <div className="userData">
                         <span>{user.name}</span>
                     </div>

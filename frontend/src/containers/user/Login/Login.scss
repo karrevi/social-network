@@ -1,21 +1,52 @@
-.loginContainer{
-    padding: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        min-height: 40vh;
-        align-items: center;
-        input{
-            
-        min-width: 35vw;
-        }
-        button{
-            width: 50%;
-        }
-    }
+@import '../../../color.scss';
+
+.loginContainer {
+    padding: 25px 0;
+}
+
+.loginContainer form {
+    max-width: 350px;
+    width: 90%;
+    background-color: $white;
+    padding: 40px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.loginContainer .form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #434a52;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+}
+
+.loginContainer .illustration {
+    text-align: center;
+    background-color: $SolidDark;
+    font-size: 40px;
+    color: $white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.loginContainer .login-up {
+    background: #214a80;
+    border: none;
+    border-radius: 4px;
+    padding: 11px;
+    box-shadow: none;
+    margin-top: 26px;
+    text-shadow: none;
+    outline: none;
 }
