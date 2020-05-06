@@ -5,32 +5,21 @@
 }
 
 .loginContainer form {
-    max-width: 350px;
-    width: 90%;
     background-color: $white;
-    padding: 40px;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
-}
-
-.loginContainer .form-control {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #434a52;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
-    color: inherit;
+    max-width: 350px;
+    margin: auto;
+    padding: 30px 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075)
 }
 
 .loginContainer .illustration {
     text-align: center;
     background-color: $SolidDark;
+    border-radius: 50%;
     font-size: 40px;
     color: $white;
     width: 100px;
@@ -40,13 +29,22 @@
     line-height: 100px;
 }
 
+.loginContainer .item {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    width: -webkit-fill-available;
+}
+
 .loginContainer .login-up {
-    background: #214a80;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: $Solid;
     border: none;
-    border-radius: 4px;
-    padding: 11px;
-    box-shadow: none;
-    margin-top: 26px;
-    text-shadow: none;
-    outline: none;
+    color: $white;
+    margin-top: 20px;
+    width: -webkit-fill-available;
+    cursor: pointer;
 }

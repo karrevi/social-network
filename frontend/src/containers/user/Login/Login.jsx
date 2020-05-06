@@ -28,10 +28,10 @@ const Login = props => {
                 <div className="illustration"><UnlockOutlined />
                 </div>
                 <div className="form-group">
-                    <input type="email" className="form-control" label="email" name="email" placeholder="Introduzca su correo electrónico" />
+                    <input type="email" className="form-control item" label="email" name="email" placeholder="Introduzca su correo electrónico" />
                 </div>
                 <div className="form-group">
-                    <input type="password" className="form-control" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
+                    <input type="password" className="form-control item" label="contraseña" name="password" placeholder="Introduzca su contraseña" />
                 </div>
                 <div className="form-group">
                     <button type="submit" className="btn btn-block login-up" variant="contained" color="primary"> Entrar </button>

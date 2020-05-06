@@ -41,9 +41,10 @@
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #5791ff;
+    background-color: $Solid;
     border: none;
     color: $white;
     margin-top: 20px;
     width: -webkit-fill-available;
+    cursor: pointer;
 }
