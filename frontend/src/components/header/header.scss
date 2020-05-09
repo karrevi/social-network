@@ -2,19 +2,19 @@
 
 .headerStation {
     background-color: $Solid;
-    padding: 0 0.8em;
+    padding: 22px 0.8em;
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: flex-end;
     a {
         all: unset;
         cursor: pointer;
-        padding: 0.5em;
+        padding: 2.5em;
         color: $white;
 
         &:hover {
             background-color: $Dark;
             color: $Ligth;
+            text-decoration: none;
         }
     }
 
@@ -23,5 +23,4 @@
         background-color: $Dark;
         color: $Ligth;
     }
-
 }

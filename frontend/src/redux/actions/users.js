@@ -24,7 +24,10 @@ export const logout = async () => {
     })
     localStorage.removeItem('authToken');
     store.dispatch({
-        type: 'LOGOUT'
+        type: 'LOGOUT',
+        payload:''
     })
-    return res;
+
+    window.location.assign("/")  
+      return res;
 }

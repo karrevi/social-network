@@ -1,12 +1,61 @@
 @import '../../../color.scss';
-.profileContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5em;
-    .userHeader {
-        display: flex;
-        img {
-            max-width: 50px;
-        }
-    }
+
+.user-profile .user-profile-card {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.user-profile-card .user-profile-header {
+    background-size: cover;
+    height: 50px;
+}
+
+.user-profile-card .user-profile-avatar {
+    top: -100px;
+    margin-bottom: 25 px;
+    padding: 0 15px;
+}
+
+.user-profile-card .user-profile-avatar img {
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.user-profile small {
+    display: block;
+    line-height: 1.428571429;
+    color: $white;
+    font-size: 100%;
+}
+
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #F5F5F5;
+    border-top: 1px solid $Solid;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.well {
+    background: $Solid;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.row{
+    padding-top: 50px !important;
+    display: flow-root !important;
+}
+h4{
+    font-size: 1.5rem;
+    color: $white;
 }

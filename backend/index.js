@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+app.options('/*', (req,res)=>res.send());
 
 app.use('/users', usersRouter);
 app.listen(PORT, () => console.log('server running on port: ' + PORT));
