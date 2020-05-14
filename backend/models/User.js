@@ -13,9 +13,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tokens:[String],
+    tokens: [String],
 });
-UserSchema.method.toJSON = function(params){
+
+UserSchema.method.toJSON = function (params) {
     const user = this._doc;
     delete user.tokens;
     delete user.password;
@@ -24,5 +25,5 @@ UserSchema.method.toJSON = function(params){
 
 }
 
-const User = mongoose.model( 'User' , UserSchema );
+const User = mongoose.model('User', UserSchema);
 module.exports = User;

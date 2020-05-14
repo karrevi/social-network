@@ -3,6 +3,7 @@ import './App.scss';
 import 'antd/dist/antd.css';
 
 import Header from './components/header/header';
+import chatRoom from './containers/chatRoom/chatRoom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './containers/user/Login/Login';
 import Register from './containers/user/Register/Register';
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/login' component={Login} exact />
                     <Route path='/register' component={Register} exact />
                     <Route path='/profile' component={Profile} exact />
+                    <Route path='/chatRoom' component={chatRoom} exact />
                 </Switch>
             </BrowserRouter>
         </div>
