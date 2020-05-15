@@ -5,8 +5,13 @@ const pokemonReducer = (state = {}, action) => {
                 ...state,
                 pokemon: action.payload
             }
-            default:
-                return state;
+            case 'POKEMON_DETAILS':
+                return {
+                    ...state,
+                    details: action.payload
+                }
+                default:
+                    return state;
     }
 };
 

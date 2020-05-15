@@ -6,11 +6,11 @@ const userReducer = (state = {}, action) => {
                 ...state,
                 user: action.payload
             }
-            case 'GET_ALL_USERS':
-                return {
-                    ...state,
-                    users: action.payload.users,
-                        user: action.payload.user
+        case 'GET_ALL_USERS':
+            return {
+                ...state,
+                users: action.payload.users,
+                user: action.payload.user
                 }
                 default:
                     return state;

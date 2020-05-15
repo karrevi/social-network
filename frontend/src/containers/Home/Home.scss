@@ -1,14 +1,18 @@
 @import '../../color.scss';
 
-.gutter-box {
-  padding: 8px 0;
-  background: #00a0e9;
+.box-log{
+  width: 15em;
+  height: 15em;
+  margin: 1em;
+  padding: 1.5px;
+  background: black;
+  img{
+    width: 12em;
+  }
 }
-
-.ant-layout-content {
-  margin: 50px;
-}
-
-.ant-layout {
-  background: none;
+.box-big {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5em;
 }
