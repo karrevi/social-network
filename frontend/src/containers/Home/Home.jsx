@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { pokemon } from '../../redux/actions/pokemon';
-import { Pagination } from 'antd';
+import { Button } from 'antd';
 import './Home.scss';
 
 const Home = (props) => {
@@ -15,8 +15,10 @@ const Home = (props) => {
                 <p>{pokemon.name}</p>
                 <img src={pokemon.image} alt="" />
             </div>)}
-            
-            <Pagination defaultCurrent={1} total={50} />
+            <div className="btn-group">
+                <Button className="btn-prev">Anterior</Button>
+                <Button className="btn-next">Siguiente</Button>
+            </div>
         </div>
     )
 }
