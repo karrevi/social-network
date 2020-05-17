@@ -7,8 +7,6 @@ import ResultadoCharacter from '../../components/Buscador/ResultadoCharacter';
 const BuscadorCharacter = () => {
     const dispatch = useDispatch();
     const [character_name, set_character_name] = useState('New Character');
-
-
     return (
         <div className="form-group">
             <label htmlFor="buscar_character" className="text-white">Busca tu personaje</label>

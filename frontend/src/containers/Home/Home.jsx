@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { character } from '../../redux/actions/characterData';
-import { Pagination } from 'antd';
 import './Home.scss';
+import { Pagination } from 'antd';
+
 const Home = (props) => {
-    const [totalPages, settotalPages] = useState(5)
+    const totalPages = props.character.info.pages * 20
     useEffect(() => {
-        character()
-            .then(res => {
-                settotalPages(res.data.pages);
-            })
+        console.log()
+        character(1)
             .catch(console.error)
     }, []);
+
+    const onPageChange = (value) => {
+        character(value)
+    }
+
     return (
         <div className="box-big">{props.character.results?.map(character =>
             <div className="box-log">
                 <p>{character.name}</p>
                 <img src={character.image} alt="" />
             </div>)}
-            <div className="btn-group">
-                <Pagination defaultCurrent={1} defaultPageSize={totalPages} total={50} />
-            </div>
+            <Pagination defaultCurrent={1} defaultPageSize={20} total={totalPages} onChange={onPageChange} showSizeChanger={false} />
         </div>
     )
 }

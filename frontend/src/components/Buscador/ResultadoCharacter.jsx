@@ -9,8 +9,9 @@ const ResultadoCharacter = () => {
             {buscador.loading && <div className="text-warning">Buscando...</div>}
             {buscador.character.length >= 1 &&
                 <div className="text-success">
-                    <img src={buscador.character[0].results[0].image} alt="Character" />
                     <span>{buscador.character[0].results[0].name}</span>
+                    <img src={buscador.character[0].results[0].image} alt="Character" />
+
                 </div>}
             {buscador.error !== '' && <span className="text-danger">{buscador.error}</span>}
         </div>
