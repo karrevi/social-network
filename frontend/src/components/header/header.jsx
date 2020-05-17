@@ -13,7 +13,7 @@ const Header = props => {
             <div className='userZone'>
                 <NavLink to='/home' exact>Home <HomeOutlined /></NavLink>
                 <NavLink to='/profile' exact> Hola, {props.userName.name} <UserOutlined /> </NavLink>
-                <NavLink to='/chat' exact>Chat <WechatOutlined /></NavLink>
+                <NavLink to='/buscador' exact>Buscador <WechatOutlined /></NavLink>
                 <button onClick={logout} className="btn-logout" >Cerrar Sesión <LogoutOutlined /> </button>
             </div> :
             <div className="guestZone">

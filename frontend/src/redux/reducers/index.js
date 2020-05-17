@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
 import user from "./user";
-import pokemon from "./pokemon.js";
+import character from "./characterData.js";
+import buscador from './buscadorCharacter';
 
 const reducer = combineReducers({
     user,
-    pokemon,
+    character,
+    buscador
 })
 
 

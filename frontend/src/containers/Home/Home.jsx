@@ -1,26 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { pokemon } from '../../redux/actions/pokemon';
-import { Button } from 'antd';
+import { character } from '../../redux/actions/characterData';
+import { Pagination } from 'antd';
 import './Home.scss';
 
 const Home = (props) => {
+    const [totalPages, settotalPages] = useState(5)
     useEffect(() => {
-        pokemon()
+        character()
+            .then(res => {
+                settotalPages(res.data.pages);
+                console.log(res.data.pages)
+            })
             .catch(console.error)
     }, []);
     return (
-        <div className="box-big">{props.pokemon?.map(pokemon =>
+        <div className="box-big">{props.character.results?.map(character =>
             <div className="box-log">
-                <p>{pokemon.name}</p>
-                <img src={pokemon.image} alt="" />
+                <p>{character.name}</p>
+                <img src={character.image} alt="" />
             </div>)}
             <div className="btn-group">
-                <Button className="btn-prev">Anterior</Button>
-                <Button className="btn-next">Siguiente</Button>
+                <Pagination defaultCurrent={1} defaultPageSize={totalPages} total={50} />
             </div>
         </div>
     )
 }
-const mapStateToProps = (state) => ({ pokemon: state.pokemon.pokemon });
+const mapStateToProps = (state) => ({ character: state.character.character });
 export default connect(mapStateToProps)(Home);
