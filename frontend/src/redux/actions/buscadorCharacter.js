@@ -27,7 +27,7 @@ const fetchCharacter = (valor) => {
         dispatch(fetchCharacterRequest());
         Axios.get(`https://rickandmortyapi.com/api/character/${valor}`)
             .then(response => {
-                dispatch(fetchCharacterSuccess([response.data]));                
+                dispatch(fetchCharacterSuccess([response.data]));
             })
             .catch(error => {
                 dispatch(fetchCharacterFailure('No se encontró el personaje'));

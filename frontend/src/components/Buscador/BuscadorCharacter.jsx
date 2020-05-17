@@ -1,13 +1,30 @@
-import React from 'react';
-import {Button} from 'antd'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
+import { Button } from 'antd'
+import fetchCharacter from '../../redux/actions/buscadorCharacter';
+import ResultadoCharacter from '../../components/Buscador/ResultadoCharacter';
 
 const BuscadorCharacter = () => {
+    const dispatch = useDispatch();
+    const [character_name, set_character_name] = useState('mewtwo');
+
     return (
         <div className="form-group">
             <label htmlFor="buscar_character" className="text-white">Busca tu personaje</label>
-            <input type="text" className="form-control" id="buscar_character" value="Rick y Morty"/>
-            <Button>Default</Button>
+            <input type="text" className="form-control" id="buscar_character"
+                value={character_name}
+                onChange={
+                    (event) => {
+                        set_character_name(event.target.value);
+                    }
+                }
+            />
+            <Button onClick={() => {
+                dispatch(fetchCharacter(character_name))
+            }}>Buscar</Button>
+            <ResultadoCharacter />
         </div>
+
 
     );
 

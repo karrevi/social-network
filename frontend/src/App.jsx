@@ -22,7 +22,7 @@ function App() {
                     <Route path='/register' component={Register} exact />
                     <Route path='/profile' component={Profile} exact />
                     <Route path='/buscador' component={BuscadorCharacter} exact />
-                    <Route path='/resultado' component={ResultadoCharacter} exact/>
+                    <Route path='/result' component={ResultadoCharacter} exact/>
                 </Switch>
             </BrowserRouter>
         </div>

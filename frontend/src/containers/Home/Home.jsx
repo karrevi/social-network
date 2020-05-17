@@ -3,14 +3,12 @@ import { connect } from 'react-redux';
 import { character } from '../../redux/actions/characterData';
 import { Pagination } from 'antd';
 import './Home.scss';
-
 const Home = (props) => {
     const [totalPages, settotalPages] = useState(5)
     useEffect(() => {
         character()
             .then(res => {
                 settotalPages(res.data.pages);
-                console.log(res.data.pages)
             })
             .catch(console.error)
     }, []);
