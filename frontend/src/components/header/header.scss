@@ -13,12 +13,12 @@
 
         &:hover {
             background-color: $Dark;
-            color: $Ligth;
+            color: $SolidDark;
             text-decoration: none;
         }
     }
     .active {
         background-color: $Dark;
-        color: $Ligth;
+        color: $SolidDark;
     }
 }

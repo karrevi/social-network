@@ -1,22 +1,40 @@
 @import '../../color.scss';
 
-.box-log{
+.box-log {
   width: 15em;
-  height: 15em;
+  height: 17em;
   margin: 1em;
   padding: 1.5px;
-  background: black;
-  img{
+  border-style: ridge;
+  border-color: $SolidDark;
+  background: $Ligth;
+
+  img {
     width: 12em;
   }
 }
+
+.box-big :hover {
+  filter: blur(2px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+  filter: none;
+}
+
 .box-big {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   margin: 5em;
+  transition: .2s;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
 }
-.btn-group{
+
+.btn-group {
   margin: 1.5em;
-  
+
+}
+
+.box-btn {
+  margin: 2.5em;
 }
