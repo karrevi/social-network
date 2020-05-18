@@ -9,6 +9,8 @@ import { WechatOutlined, HomeOutlined, UserOutlined, LogoutOutlined } from '@ant
 const Header = props => {
 
     return <header className="headerStation">
+        <div className="name-App">
+        </div>
         {props.userName ?
             <div className='userZone'>
                 <NavLink to='/home' exact>Home <HomeOutlined /></NavLink>

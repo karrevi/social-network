@@ -1,20 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Card, Alert } from 'antd';
 
 const ResultadoCharacter = () => {
+    const { Meta } = Card;
     const buscador = useSelector((state) => state.buscador);
     return (
-        <div>
+        <Card hoverable
+            style={{ width: 240 }}
+            cover={<img alt="" src={buscador.character[0].results[0].image} />}>
+            <Meta title={buscador.character[0].results[0].name} description={buscador.character[0].results[0].status} />
             <h3 className="text-white">Resultado: </h3>
-            {buscador.loading && <div className="text-warning">Buscando...</div>}
+            {buscador.loading && <Alert message="Buscando..." type="warning" showIcon closable />}
             {buscador.character.length >= 1 &&
-                <div className="text-success">
-                    <span>{buscador.character[0].results[0].name}</span>
-                    <img src={buscador.character[0].results[0].image} alt="Character" />
-
-                </div>}
-            {buscador.error !== '' && <span className="text-danger">{buscador.error}</span>}
-        </div>
+                <Alert message="Se encontró" type="success" showIcon />}
+            {buscador.error !== '' && <Alert message={buscador.error} type="error" showIcon />}
+        </Card>
     );
 }
 

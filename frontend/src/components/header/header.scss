@@ -5,6 +5,7 @@
     padding: 22px 0.8em;
     display: flex;
     justify-content: flex-end;
+
     a {
         all: unset;
         cursor: pointer;
@@ -17,8 +18,32 @@
             text-decoration: none;
         }
     }
+
     .active {
         background-color: $Dark;
         color: $SolidDark;
+    }
+
+    .btn-logout {
+        border: none;
+        background: none;
+
+        a {
+            all: unset;
+            cursor: pointer;
+            padding: 1.6em;
+            color: $white;
+
+            &:hover {
+                background-color: $Dark;
+                color: $SolidDark;
+                text-decoration: none;
+            }
+
+            .active {
+                background-color: $Dark;
+                color: $SolidDark;
+            }
+        }
     }
 }

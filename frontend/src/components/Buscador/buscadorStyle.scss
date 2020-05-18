@@ -1,0 +1,19 @@
+@import '../../color.scss';
+
+.site-layout-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+    margin: 2em;
+}
+
+#components-layout-demo-top .logo {
+    width: 120px;
+    height: 31px;
+    background: #fff;
+    margin: 16px 24px 16px 0;
+    float: left;
+}
+.search-box-big{
+    margin: 1em;
+}
